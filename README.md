@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+为防止版本更新而造成的问题，可以按下面的指令手动安装依赖包：
+npm  install classnames --save //安装classnames包
+npm  install @types/classnames --save
+
+TS函数传参的时候, 形参有默认值的情况下, 传递给形参的对象不能完全覆盖形参的默认值时, 会自动将未覆盖的值和新传入的值融合到一起形成一个新的对象作为参数
