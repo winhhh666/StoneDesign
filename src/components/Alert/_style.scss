@@ -5,13 +5,13 @@ $alert-colors:
   "warning":    $warning,
   "danger":     $danger,
 );
-.viking-alert {
+.stone-alert {
   position: relative;
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   border-radius: $alert-border-radius;
-  .viking-alert-close {
+  .stone-alert-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -22,13 +22,13 @@ $alert-colors:
   .bold-title {
     font-weight: $font-weight-bold;
   }
-  .viking-alert-desc {
+  .stone-alert-desc {
     font-size: $alert-description-font-size;
     margin: $alert-description-top-margin 0 0;
   }
 }
 @each $color, $value in $alert-colors {
-  .viking-alert-#{$color} {
+  .stone-alert-#{$color} {
     @include alert-style($value, darken($value, 5%), $white);
   }
 }

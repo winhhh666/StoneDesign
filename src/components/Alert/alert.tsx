@@ -30,14 +30,14 @@ export const Alert: FC<AlertProps> = (props) => {
   const {
     title,
     description,
-    type,
+    type = 'default',
     onClose,
-    closable
+    closable = true
   } = props
-  const classes = classNames('viking-alert', {
-    [`viking-alert-${type}`]: type,
+  const classes = classNames('stone-alert', {
+    [`stone-alert-${type}`]: type,
   })
-  const titleClass = classNames('viking-alert-title', {
+  const titleClass = classNames('stone-alert-title', {
     'bold-title': description
   })
   const handleClose = (e: React.MouseEvent) => {
@@ -54,15 +54,12 @@ export const Alert: FC<AlertProps> = (props) => {
     >
       <div className={classes}>
         <span className={titleClass}>{title}</span>
-        {description && <p className="viking-alert-desc">{description}</p>}
-        {closable && <span className="viking-alert-close" onClick={handleClose}><Icon icon="times"/></span>}
+        {description && <p className="stone-alert-desc">{description}</p>}
+        {closable && <span className="stone-alert-close" onClick={handleClose}><Icon icon="times"/></span>}
       </div>
     </Transition>
   )
 }
 
-Alert.defaultProps = {
-  type: 'default',
-  closable: true,
-}
+
 export default Alert;
