@@ -135,9 +135,9 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
         timeout={300}
         onExited={() => {setSuggestions([])}}
       >
-        <ul className="viking-suggestion-list">
+        <ul className="stone-suggestion-list">
           { loading &&
-            <div className="suggstions-loading-icon">
+            <div className="suggestions-loading-icon">
               <Icon icon="spinner" spin/>
             </div>
           }
